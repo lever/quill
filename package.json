@@ -1,6 +1,6 @@
 {
-  "name": "quill",
-  "version": "0.20.1",
+  "name": "lever-quill",
+  "version": "1.0.0",
   "description": "Cross browser rich text editor",
   "author": "Jason Chen <jhchen7@gmail.com>",
   "homepage": "http://quilljs.com",
@@ -65,10 +65,10 @@
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/quilljs/quill"
+    "url": "https://github.com/lever/quill"
   },
   "bugs": {
-    "url": "https://github.com/quilljs/quill/issues"
+    "url": "https://github.com/lever/quill/issues"
   },
   "scripts": {
     "prepublish": "grunt dist",
