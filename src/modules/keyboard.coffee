@@ -106,7 +106,7 @@ class Keyboard
       if range? and @quill.getLength() > 0
         if range.start != range.end
           before = @quill.getText(Math.max(range.start - 1, 0), range.start)
-          after = @quill.getText(range.end, Math.max(range.end + 1, @quill.getLength()))
+          after = @quill.getText(range.end, Math.min(range.end + 1, @quill.getLength()))
           if ' ' == before == after
             range.start = range.start - 1
           @quill.deleteText(range.start, range.end, Quill.sources.USER)
