@@ -81,7 +81,8 @@ class Document
     lineNode = lineNode.firstChild if lineNode? and dom.LIST_TAGS[lineNode.tagName]?
     _.each(lines, (line, index) =>
       while line.node != lineNode
-        if line.node.parentNode == @root or line.node.parentNode?.parentNode == @root
+        # https://github.com/quilljs/quill/pull/408
+        if lineNode && (line.node.parentNode == @root or line.node.parentNode?.parentNode == @root)
           # New line inserted
           lineNode = @normalizer.normalizeLine(lineNode)
           newLine = this.insertLineBefore(lineNode, line)
